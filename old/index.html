@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Range slider</title>
+  <!-- <script src="js/jquery-3.3.1.js"></script> -->
+  <script src="js/jquery-2.2.4.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+</head>
+
+
+<body style="color: #000000;">
+<div class="slider" data-slider data-options="step: 5;" style="width: 30%;">
+    <span class="slider-handle" data-slider-handle role="slider" tabindex="0"></span>
+    <span class="slider-fill" data-slider-fill></span>
+    <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+    <span class="slider-active-segment" style="background: #000;"></span>
+    <input id="result1" type="hidden">
+    <input id="result2" type="hidden">
+</div>
+
+<div class="wrapper">
+  <div class="slider vertical" data-slider data-initial-start="25" data-end="200" data-vertical="true" data-changed-delay="0">
+    <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+    <span class="slider-fill" data-slider-fill></span>
+    <input id="result" type="hidden">
+  </div>
+  <div id="display">
+  
+  </div>
+</div>
+
+<script>
+  $(document).foundation();
+
+$('.slider').on('changed.zf.slider', function() {
+  $('#display').html($('#result1').val());
+  console.log($('#result1').val())
+  $('#display').html($('#result2').val());
+  console.log($('#result2').val())
+});
+</script>
+
+
+ 
+</body>
+</html>
