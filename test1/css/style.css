@@ -1,0 +1,19 @@
+legend{
+    text-decoration: underline; 
+   }
+   label.options{
+    text-decoration: underline; 
+  }
+    .wrapper .slider{
+      margin-left: 20%;
+      width: 60%;
+     }
+
+    .pr_list{
+      width:180px;
+      height:220px;
+      float:left;
+      padding:2px;
+      margin:2px;
+      border:1px solid #CCCCCC;
+       }
